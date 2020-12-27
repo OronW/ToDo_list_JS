@@ -61,6 +61,7 @@ form button:hover {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  transition: all 0.5s ease;
 }
 
 .todo li {
@@ -88,4 +89,56 @@ form button:hover {
 .fa-trash,
 .fa-check {
   pointer-events: none;
+}
+
+.completed {
+  color: grey;
+  text-decoration: line-through;
+  opacity: 0.5;
+  background-color: lightgreen;
+}
+
+.fall {
+  transform: translateY(8rem) rotateZ(20deg);
+  opacity: 0;
+}
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: none;
+  border: none;
+}
+
+.select {
+  margin: 1rem;
+  position: relative;
+  overflow: hidden;
+}
+
+select {
+  color: lightsalmon;
+  width: 10rem;
+  cursor: pointer;
+  padding: 1rem;
+  font-size: 1.3rem;
+  width: 13rem;
+}
+
+.select::after {
+  content: "\25bc";
+  position: absolute;
+  background: white;
+  color: lightsalmon;
+  top: 0;
+  right: 0;
+  padding: 1.18rem;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+.select:hover::after {
+  background: lightsalmon;
+  color: white;
 }
