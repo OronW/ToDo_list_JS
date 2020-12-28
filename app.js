@@ -5,6 +5,7 @@ const todoList = document.querySelector(".todo-list");
 const filterOption = document.querySelector(".filter-todo");
 
 //Event listeners
+document.addEventListener("DOMContentLoaded", updateListName);
 document.addEventListener("DOMContentLoaded", getTodos);
 todoButton.addEventListener("click", addTodo);
 todoList.addEventListener("click", deleteCheck);
@@ -148,4 +149,11 @@ function removeLocalTodos(todo) {
   const todoIndex = todo.children[0].innerText;
   todos.splice(todos.indexOf(todoIndex), 1);
   localStorage.setItem("todos", JSON.stringify(todos));
+}
+
+function updateListName() {
+  //Prompt
+  let name = prompt("Enter your name:");
+  let el = document.getElementById("list-name");
+  el.innerText = name ? `${name}'s Todo List` : "Your Todo List";
 }
