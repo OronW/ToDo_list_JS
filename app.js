@@ -22,13 +22,11 @@ function addTodo(event) {
   //   //Todo div
   //   const todoDiv = document.createElement("div");
   //   todoDiv.classList.add("todo");
-
   //   //Create LI
   //   const newTodo = document.createElement("li");
   //   newTodo.innerText = todoInput.value;
   //   newTodo.classList.add("todo-item");
   //   todoDiv.appendChild(newTodo);
-
   //   // Add list to localstorage
   //   saveLocalTodos(todoInput.value);
   //   //Check mark button
@@ -36,7 +34,6 @@ function addTodo(event) {
   //   completedButton.innerHTML = '<i class="fas fa-check"></i>';
   //   completedButton.classList.add("complete-btn");
   //   todoDiv.appendChild(completedButton);
-
   //   const trashButton = document.createElement("button");
   //   trashButton.innerHTML = '<i class="fas fa-trash"></i>';
   //   trashButton.classList.add("trash-btn");
@@ -106,6 +103,7 @@ function saveLocalTodos(todo) {
   localStorage.setItem("todos", JSON.stringify(todos));
 }
 
+
 function getTodosFromLocalStorage() {
   let todos;
   if (localStorage.getItem("todos") === null) {
@@ -138,6 +136,7 @@ function getTodosFromLocalStorage() {
 
     //     //Append to list
     //     todoList.appendChild(todoDiv);
+
   });
 }
 
@@ -160,7 +159,6 @@ function updateListName() {
   let el = document.getElementById("list-name");
   el.innerText = name ? `${name}'s Todo List` : "Your Todo List";
 }
-
 function addTodoStructure(localStorageFlag = false, todo = null) {
   //Todo div
   const todoDiv = document.createElement("div");
