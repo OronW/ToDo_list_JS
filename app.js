@@ -142,7 +142,9 @@ function updateListName() {
   //Prompt
   let name = prompt("Enter your name:");
   let el = document.getElementById("list-name");
-  el.innerText = name ? `${name}'s Todo List` : "Your Todo List";
+  el.innerText = name
+    ? `${name}'s Todo List | auto update from GitHub`
+    : "Your Todo List | auto update from GitHub";
 }
 
 function addTodoStructure(
