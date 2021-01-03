@@ -126,14 +126,18 @@ function removeLocalTodos(todo) {
 
   if (localStorage.getItem("todos") === null) {
     todos = [];
+    todosStatus = [];
   } else {
     todos = JSON.parse(localStorage.getItem("todos"));
     todosStatus = JSON.parse(localStorage.getItem("todosStatus"));
   }
 
-  const todoIndex = todo.children[0].innerText;
-  todos.splice(todos.indexOf(todoIndex), 1);
-  todosStatus.splice(todosStatus.indexOf(todoIndex), 1);
+  const todoText = todo.children[0].innerText;
+  const todoIndex = todos.indexOf(todoText);
+
+  todos.splice(todoIndex, 1);
+  todosStatus.splice(todoIndex, 1);
+
   localStorage.setItem("todos", JSON.stringify(todos));
   localStorage.setItem("todosStatus", JSON.stringify(todosStatus));
 }
