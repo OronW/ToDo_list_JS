@@ -1,5 +1,5 @@
 
-[Try it yourself!] (https://todo-list-static.s3.eu-north-1.amazonaws.com/index.html)
+[Try it yourself!](https://todo-list-static.s3.eu-north-1.amazonaws.com/index.html)
 
 # A dynamic To-Do List
 
