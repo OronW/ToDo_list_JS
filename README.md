@@ -9,3 +9,9 @@
 - Add and remove your to-do items
 - Items are saved after a page refresh or browser restart
 - Filter your items based on completed/uncompleted/all
+
+## The site automaticaly updates upon any changes to this git repository
+- It is hosted on AWS using S3 bucket
+- The code in the bucket is connected to git via AWS codePipeline
+
+## Use the link at the top of the page to try it yourself!
